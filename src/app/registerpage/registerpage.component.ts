@@ -14,6 +14,8 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
   @Input() langcd :any;
   errorMessage: any;
   isInscription: boolean=false;
+  response: any;
+  successful: boolean=false;
   constructor(private apiS : ApiService, private router : Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -32,11 +34,30 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(){
-    this.apiS.addEtudiant(this.credentials).subscribe(resp=>{console.log(resp); this.router.navigateByUrl('/home');},
+    this.apiS.addEtudiant(this.credentials).subscribe(Response=>{
+
+      this.response=Response.message;
+      this.successful=true;
+      this.isInscription = false;
+      this.credentials.nom='';
+      this.credentials.classe=null;
+      this.credentials.ecole='';
+      this.credentials.email='';
+      this.credentials.prenom='';
+      this.credentials.specialite='';
+      this.credentials.tel='';
+
+
+     // this.router.navigateByUrl('/home');
+    },
     error => {
       console.log(error);
+
       this.errorMessage = error.error.message;
       this.isInscription = true;
+      this.successful=false;
+
+
 
     }
   );

@@ -12,14 +12,14 @@ export class ApiService {
 
 
   
-  addEntreprise(entreprise){
+  addEntreprise(entreprise):any{
     return this.http.post(this.baseURI+'/entreprise',entreprise,{headers:this.header});
   }
 
-  addEmploye(empl){
+  addEmploye(empl):any{
     return this.http.post(this.baseURI+'/employes',empl,{headers:this.header});
   }
-  addEtudiant(etudiant){
+  addEtudiant(etudiant):any{
     return this.http.post(this.baseURI+'/etudiant',etudiant,{headers:this.header});
   }
 }

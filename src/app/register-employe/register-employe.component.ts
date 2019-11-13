@@ -15,6 +15,8 @@ export class RegisterEmployeComponent implements OnInit, OnDestroy {
   @Input() credentials: Employe;
   @Input() langcd :any;
   errorMessage: any;
+  response: any;message:any;
+  successful: boolean=false;
   isInscription: boolean = false;
   constructor(private apiS: ApiService, private router: Router, private route: ActivatedRoute) { }
 
@@ -33,7 +35,17 @@ export class RegisterEmployeComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    this.apiS.addEmploye(this.credentials).subscribe(resp => { console.log(resp); this.router.navigateByUrl('/home'); },
+    this.apiS.addEmploye(this.credentials).subscribe(Response => { console.log(Response.message);
+
+      this.response=Response.message;
+      this.successful=true;
+      this.isInscription = false;
+      this.credentials.nom='';
+      this.credentials.entreprise='';
+      this.credentials.fonction='';
+      this.credentials.email='';
+      this.credentials.prenom='';
+      this.credentials.tel=''; },
       error => {
         console.log(error);
         this.errorMessage = error.error.message;

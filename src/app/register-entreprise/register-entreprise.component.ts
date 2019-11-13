@@ -14,6 +14,8 @@ export class RegisterEntrepriseComponent  implements OnInit, OnDestroy {
   @Input() credentials : Entreprise ;
   @Input() langcd :any;
   errorMessage: any;
+  response: any;
+  successful: boolean=false;
   isInscription: boolean=false;
   constructor(private apiS : ApiService, private router : Router, private route: ActivatedRoute) { }
 
@@ -32,8 +34,16 @@ export class RegisterEntrepriseComponent  implements OnInit, OnDestroy {
   }
 
   onSubmit(){
-    this.apiS.addEntreprise(this.credentials).subscribe(resp=>{console.log(resp); 
-      this.router.navigateByUrl('/home');
+    this.apiS.addEntreprise(this.credentials).subscribe(Response=>{
+     
+      this.response=Response.message;
+      this.successful=true;
+      this.isInscription = false;
+      this.credentials.nom='';
+      this.credentials.domaineActivites='';
+      this.credentials.raisonSociale='';
+      this.credentials.email='';
+      this.credentials.tel='';
 
     },
     error => {

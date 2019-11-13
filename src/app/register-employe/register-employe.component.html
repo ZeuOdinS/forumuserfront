@@ -18,15 +18,24 @@
             <h1 class="profile-title text-left">Inscription</h1>
             <p class="text-on-back">Forum</p>
           <div class="card card-plain">
-              <div class="row">
-                  <div class="form-group" class="col-md-12">
-                  <alert *ngIf="isInscription" class="alert-with-icon" [type]="'warning alert-with-icon'">
-                   <span class="tim-icons icon-bulb-63" data-notify="icon"> </span>
-                   <span>
-                 {{errorMessage}}
-                   </span>
-                 </alert>
-               </div></div>
+            <div class="row">
+              <div class="form-group" class="col-md-12">
+              <alert *ngIf="successful" class="alert-with-icon" [type]="'success alert-with-icon'">
+               <span class="tim-icons icon-satisfied" data-notify="icon"> </span>
+               <span>
+             {{response}}
+               </span>
+             </alert>
+           </div></div>
+           <div class="row">
+            <div class="form-group" class="col-md-12">
+            <alert *ngIf="isInscription" class="alert-with-icon" [type]="'warning alert-with-icon'">
+             <span class="tim-icons icon-bulb-63" data-notify="icon"> </span>
+             <span>
+           {{errorMessage}}
+             </span>
+           </alert>
+         </div></div>
             <div class="card-body">
               <form #f="ngForm"  (ngSubmit)="onSubmit()" ngNativeValidate>
                 <div class="row">
@@ -140,15 +149,24 @@
     <h1 class="profile-title text-left">Registration</h1>
     <p class="text-on-back">Forum</p>
   <div class="card card-plain">
-      <div class="row">
-          <div class="form-group" class="col-md-12">
-          <alert *ngIf="isInscription" class="alert-with-icon" [type]="'warning alert-with-icon'">
-           <span class="tim-icons icon-bulb-63" data-notify="icon"> </span>
-           <span>
-         {{errorMessage}}
-           </span>
-         </alert>
-       </div></div>
+    <div class="row">
+      <div class="form-group" class="col-md-12">
+      <alert *ngIf="successful" class="alert-with-icon" [type]="'success alert-with-icon'">
+       <span class="tim-icons icon-satisfied " data-notify="icon"> </span>
+       <span>
+     {{response}}
+       </span>
+     </alert>
+   </div></div>
+   <div class="row">
+    <div class="form-group" class="col-md-12">
+    <alert *ngIf="isInscription" class="alert-with-icon" [type]="'warning alert-with-icon'">
+     <span class="tim-icons icon-bulb-63" data-notify="icon"> </span>
+     <span>
+   {{errorMessage}}
+     </span>
+   </alert>
+ </div></div>
     <div class="card-body">
       <form #f="ngForm"  (ngSubmit)="onSubmit()" ngNativeValidate>
         <div class="row">
