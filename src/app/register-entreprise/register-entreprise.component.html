@@ -1,0 +1,282 @@
+<app-header [langcd]="langcd"></app-header>
+
+<div class="wrapper">
+  
+  <section class="section">
+    <div class="container">
+      <div class="row">
+             <!--  <div class="squares square1"> </div>
+                <div class="squares square2"></div>
+                <div class="squares square3"></div>
+                <div class="squares square4"></div>
+                <div class="squares square5"></div>
+                <div class="squares square7"></div>--> 
+
+<!--===========================Francais=================================-->
+
+        <div *ngIf=langcd class="col-md-12">
+            <h1 class="profile-title text-left">Inscription</h1>
+            <p class="text-on-back">Forum</p>
+            <div class="row">
+                <div class="form-group" class="col-md-12">
+                <alert *ngIf="isInscription" class="alert-with-icon" [type]="'warning alert-with-icon'">
+                 <span class="tim-icons icon-bulb-63" data-notify="icon"> </span>
+                 <span>
+               {{errorMessage}}
+                 </span>
+               </alert>
+             </div></div>
+          <div class="card card-plain">
+         
+            <div class="card-body">
+              <form #f="ngForm"  (ngSubmit)="onSubmit()" ngNativeValidate>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                          <label>Nom <span style="color: red;">*</span></label>
+                          <input
+                            class="form-control"
+                            placeholder="Nom de votre entreprise"
+                            type="text"
+                             required
+                             minlength="3"
+                             name="nom"
+
+                            [(ngModel)]="credentials.nom"
+                          />
+
+                        </div>
+                      </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label> Raison sociale <span style="color: red;">*</span></label>
+                      <input class="form-control" type="text"           
+                                   placeholder="Raison sociale"
+                                   required
+                                   minlength="5"
+                                   name="raisonSociale"
+                                   [(ngModel)]="credentials.raisonSociale"
+                      />
+
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                      <div class="form-group">
+                        <label> Email <span style="color: red;">*</span></label>
+                        <input
+                          class="form-control" 
+                          type="email"
+                          required
+                          name="email"
+
+                                                    placeholder="exemple@forum.com"
+                          [(ngModel)]="credentials.email"
+                        />
+
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Adresse <span style="color: red;">*</span></label>
+                        <input
+                          class="form-control"
+                          placeholder="1 rue, av..."
+                          type="text" 
+                          required
+                          minlength="5"
+                          name="adresse"
+                           [(ngModel)]="credentials.adresse"
+                        />
+
+                      </div>
+                    </div>
+                
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label> Domaine d’activités <span style="color: red;">*</span></label>
+                        <input
+                          class="form-control"
+                          placeholder="Domaine d'activité"
+                          type="text"
+                          required
+                          minlength="3"
+                          name="domaineActivites"
+                    [(ngModel)]="credentials.domaineActivites"
+                        />
+
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label> Téléphone <span style="color: red;">*</span></label>
+                        <input
+                          class="form-control"
+                          type="tel"
+                          placeholder="12321345"
+                          required
+                          minlength="8"
+                          maxlength="8"
+                          name="tel"
+                          [(ngModel)]="credentials.tel"
+  
+                        />
+
+                    </div>
+                  </div>
+
+                
+                </div>
+          
+                <button
+                  class="btn btn-primary btn-round float-right"
+                  placement="right"
+                  type="submit"
+                >
+                  S'inscrire 
+                </button>
+             
+              </form>
+            </div>
+          </div>
+        </div>
+       
+<!--===========================Anglais=================================-->
+
+<div *ngIf=!langcd class="col-md-12">
+    <h1 class="profile-title text-left">Registration</h1>
+    <p class="text-on-back">Forum</p>
+    <div class="row">
+        <div class="form-group" class="col-md-12">
+        <alert *ngIf="isInscription" class="alert-with-icon" [type]="'warning alert-with-icon'">
+         <span class="tim-icons icon-bulb-63" data-notify="icon"> </span>
+         <span>
+       {{errorMessage}}
+         </span>
+       </alert>
+     </div></div>
+  <div class="card card-plain">
+ 
+    <div class="card-body">
+      <form #f="ngForm"  (ngSubmit)="onSubmit()" ngNativeValidate>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                  <label>Name <span style="color: red;">*</span></label>
+                  <input
+                    class="form-control"
+                    placeholder="Name of your company"
+                    type="text"
+                     required
+                     minlength="3"
+                     name="nom"
+
+                    [(ngModel)]="credentials.nom"
+                  />
+
+                </div>
+              </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label> Social reason  <span style="color: red;">*</span></label>
+              <input class="form-control" type="text"           
+                           placeholder="Social reason"
+                           required
+                           minlength="5"
+                           name="raisonSociale"
+                           [(ngModel)]="credentials.raisonSociale"
+              />
+
+            </div>
+          </div>
+         
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+              <div class="form-group">
+                <label> E-mail <span style="color: red;">*</span></label>
+                <input
+                  class="form-control" 
+                  type="email"
+                  required
+                  name="email"
+                   placeholder="exemple@forum.com"
+                  [(ngModel)]="credentials.email"
+                />
+
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Address <span style="color: red;">*</span></label>
+                <input
+                  class="form-control"
+                  placeholder="1 rue, av..."
+                  type="text" 
+                  required
+                  minlength="5"
+                  name="adresse"
+                   [(ngModel)]="credentials.adresse"
+                />
+
+              </div>
+            </div>
+        
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+                <label> Activity field<span style="color: red;">*</span></label>
+                <input
+                  class="form-control"
+                  placeholder="Activity field"
+                  type="text"
+                  required
+                  minlength="3"
+                  name="domaineActivites"
+            [(ngModel)]="credentials.domaineActivites"
+                />
+
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+                <label> Phone <span style="color: red;">*</span></label>
+                <input
+                  class="form-control"
+                  type="tel"
+                  placeholder="12321345"
+                  required
+                  minlength="8"
+                  maxlength="8"
+                  name="tel"
+                  [(ngModel)]="credentials.tel"
+
+                />
+
+            </div>
+          </div>
+
+        
+        </div>
+  
+        <button
+          class="btn btn-primary btn-round float-right"
+          placement="right"
+          type="submit"
+        >
+        Register 
+        </button>
+     
+      </form>
+    </div>
+  </div>
+</div>
+      </div>
+
+    </div>
+  </section></div>

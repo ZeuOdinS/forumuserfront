@@ -1,0 +1,307 @@
+ 
+ <!-------------------------------------------Francais------------------------------------------------>
+
+ <nav *ngIf=lang class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="100" id="navbar-top">
+  <div class="container">
+    <div class="navbar-translate">
+      <a class="navbar-brand" placement="bottom" pageScroll href="#acceuil">
+        <img src="../../../assets/img/logo.png">
+      </a>
+      <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler"
+        [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="navigation" type="button">
+        <span class="navbar-toggler-bar bar1"> </span>
+        <span class="navbar-toggler-bar bar2"> </span>
+        <span class="navbar-toggler-bar bar3"> </span>
+      </button>
+    </div>
+    <div class="navbar-collapse justify-content-end" [collapse]="isCollapsed" id="navigation">
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-10 collapse-brand"><a>
+
+            </a></div>
+          <div class="col-2 collapse-close text-right">
+            <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler"
+              [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="navigation" type="button">
+              <i class="tim-icons icon-simple-remove"> </i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item p-0">
+          <a class="nav-link" href="https://www.linkedin.com/company/insight-of-ensit/about/" placement="bottom"
+            target="_blank" tooltip="Suivez-nous sur LinkedIn"
+            (click)="isCollapsed = !isCollapsed"
+            >
+            <i class="fab fa-linkedin-in"> </i>
+            <p class="d-lg-none d-xl-none">LinkedIn</p>
+          </a>
+        </li>
+        <li class="nav-item p-0">
+          <a class="nav-link" href="https://www.facebook.com/pg/InsightofENSIT/about/?ref=page_internal"
+            placement="bottom" target="_blank" tooltip="Aimez-nous sur Facebook"
+            (click)="isCollapsed = !isCollapsed"
+            >
+            <i class="fab fa-facebook-square"> </i>
+            <p class="d-lg-none d-xl-none">Facebook</p>
+          </a>
+        </li>
+        <li class="nav-item p-0">
+          <a class="nav-link" href="https://www.instagram.com/insightofensit19/p/Bqx_2wenDA_/?hl=en" placement="bottom"
+            target="_blank" tooltip="Suivez-nous sur Instagram"              (click)="isCollapsed = !isCollapsed"
+            >
+            <i class="fab fa-instagram"> </i>
+            <p class="d-lg-none d-xl-none">Instagram</p>
+          </a>
+        </li>
+
+        <li class="nav-item p-0">
+          <a class="nav-link" pageScroll href="#acceuil" placement="bottom" tooltip="Acceuil"
+          (click)="isCollapsed = !isCollapsed">
+            <p>Acceuil</p>
+          </a>
+        </li>
+        <li class="nav-item p-0">
+          <a class="nav-link" pageScroll href="#descF" placement="bottom" tooltip="Forum 2019"
+            (click)="isCollapsed = !isCollapsed">
+            <p>Forum 2019</p>
+          </a>
+        </li>
+
+        <li class="nav-item p-0">
+          <a class="nav-link" pageScroll href="#sponsor" placement="bottom" tooltip=" Sponsors & Partenaires"
+            (click)="isCollapsed = !isCollapsed">
+
+            <p> Sponsors & Partenaires</p>
+          </a>
+        </li>
+
+        <li class="nav-item p-0">
+          <a class="nav-link" pageScroll href="#edition" placement="bottom" tooltip=" Anciens Éditions"
+            (click)="isCollapsed = !isCollapsed">
+            <p>Anciennes Éditions</p>
+          </a>
+        </li>
+
+        <li class="nav-item p-0">
+          <a class="nav-link" pageScroll href="#temoignage" placement="bottom" tooltip="Temoignage"
+            (click)="isCollapsed = !isCollapsed">
+            <p>Témoignage</p>
+          </a>
+        </li>
+
+
+        <li class="dropdown nav-item" dropdown>
+          <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" dropdownToggle
+            href="javascript:void(0)">
+           Inscription
+          </a>
+          <div class="dropdown-menu " *dropdownMenu>
+            <a class="dropdown-item" (click)="registerEtudiant(lang)" >
+              Etudiant
+            </a>
+
+            <a class="dropdown-item"  (click)="registerEmploye(lang)">
+              Employés
+            </a>
+            <a class="dropdown-item" (click)="registerEntreprise(lang)">
+              Entreprise
+            </a>
+          </div>
+        </li>
+        <li class="dropdown nav-item" dropdown >
+            <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown"  dropdownToggle
+              href="javascript:void(0)">
+             Langue
+            </a>
+            <div class="dropdown-menu " *dropdownMenu >
+              <a class="dropdown-item " (click)="isCollapsed = !isCollapsed"  (click)="changeLangue('FR')" >
+                Français
+              </a>
+  
+              <a class="dropdown-item"(click)="isCollapsed = !isCollapsed"  (click)="changeLangue('EN')">
+                Anglais
+              </a>
+           
+            </div>
+          </li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-------------------------------------------Anglais------------------------------------------------>
+
+<nav *ngIf=!lang class="navbar navbar-expand-lg fixed-top navbar-transparent" color-on-scroll="100" id="navbar-top">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" placement="bottom" pageScroll href="#acceuil">
+          <img src="../../../assets/img/logo.png">
+        </a>
+        <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler"
+          [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="navigation" type="button">
+          <span class="navbar-toggler-bar bar1"> </span>
+          <span class="navbar-toggler-bar bar2"> </span>
+          <span class="navbar-toggler-bar bar3"> </span>
+        </button>
+      </div>
+      <div class="navbar-collapse justify-content-end" [collapse]="isCollapsed" id="navigation">
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-10 collapse-brand"><a>
+  
+              </a></div>
+            <div class="col-2 collapse-close text-right">
+              <button aria-controls="navigation-index" aria-label="Toggle navigation" class="navbar-toggler"
+                [attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="navigation" type="button">
+                <i class="tim-icons icon-simple-remove"> </i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item p-0">
+            <a class="nav-link" href="https://www.linkedin.com/company/insight-of-ensit/about/" placement="bottom"
+              target="_blank" tooltip="follow us on LinkedIn"
+              (click)="isCollapsed = !isCollapsed"
+              >
+              <i class="fab fa-linkedin-in"> </i>
+              <p class="d-lg-none d-xl-none">LinkedIn</p>
+            </a>
+          </li>
+          <li class="nav-item p-0">
+            <a class="nav-link" href="https://www.facebook.com/pg/InsightofENSIT/about/?ref=page_internal"
+              placement="bottom" target="_blank" tooltip="like us on Facebook"
+              (click)="isCollapsed = !isCollapsed"
+              >
+              <i class="fab fa-facebook-square"> </i>
+              <p class="d-lg-none d-xl-none">Facebook</p>
+            </a>
+          </li>
+          <li class="nav-item p-0">
+            <a class="nav-link" href="https://www.instagram.com/insightofensit19/p/Bqx_2wenDA_/?hl=en" placement="bottom"
+              target="_blank" tooltip="follow us on Instagram"              (click)="isCollapsed = !isCollapsed"
+              >
+              <i class="fab fa-instagram"> </i>
+              <p class="d-lg-none d-xl-none">Instagram</p>
+            </a>
+          </li>
+  
+          <li class="nav-item p-0">
+            <a class="nav-link" pageScroll href="#acceuil" placement="bottom" tooltip="Acceuil"
+            (click)="isCollapsed = !isCollapsed">
+              <p>Home</p>
+            </a>
+          </li>
+          <li class="nav-item p-0">
+            <a class="nav-link" pageScroll href="#descF" placement="bottom" tooltip="Forum 2019"
+              (click)="isCollapsed = !isCollapsed">
+              <p>Forum 2019</p>
+            </a>
+          </li>
+  
+          <li class="nav-item p-0">
+            <a class="nav-link" pageScroll href="#sponsor" placement="bottom" tooltip=" Sponsors & Partenaires"
+              (click)="isCollapsed = !isCollapsed">
+  
+              <p> Sponsors & Partner</p>
+            </a>
+          </li>
+  
+          <li class="nav-item p-0">
+            <a class="nav-link" pageScroll href="#edition" placement="bottom" tooltip=" Anciens Éditions"
+              (click)="isCollapsed = !isCollapsed">
+              <p>Old Editions</p>
+            </a>
+          </li>
+  
+          <li class="nav-item p-0">
+            <a class="nav-link" pageScroll href="#temoignage" placement="bottom" tooltip="Temoignage"
+              (click)="isCollapsed = !isCollapsed">
+              <p>Testimonials</p>
+            </a>
+          </li>
+  
+  
+          <li class="dropdown nav-item" dropdown>
+            <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" dropdownToggle
+              href="javascript:void(0)">
+              Registration
+            </a>
+            <div class="dropdown-menu " *dropdownMenu>
+              <a class="dropdown-item" (click)="registerEtudiant(lang)" >
+                Student
+              </a>
+  
+              <a class="dropdown-item"  (click)="registerEmploye(lang)">
+                Employee
+              </a>
+              <a class="dropdown-item"  [routerLink]="['/registerentreprise']">
+                Business
+              </a>
+            </div>
+          </li>
+  
+          <li class="dropdown nav-item" dropdown>
+              <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown"  dropdownToggle
+                href="javascript:void(0)">
+               Language
+              </a>
+              <div class="dropdown-menu " *dropdownMenu>
+                  <a class="dropdown-item " (click)="isCollapsed = !isCollapsed"  (click)="changeLangue('FR')" >
+                      French
+                </a>
+    
+                <a class="dropdown-item "  (click)="isCollapsed = !isCollapsed" (click)="changeLangue('EN')" >
+                    English
+                </a>
+             
+              </div>
+            </li>
+  
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-------------------------------------body--------------------------------------------------->
+<!----------------------------------------------------------------------------------------->
+
+
+<div class="wrapper" id="acceuil">
+
+
+  <div class="container">
+
+    <app-countdown [langcd]="lang"></app-countdown>
+
+
+  </div>
+
+  <div class="container">
+    <div class="space-50" id="descF"></div>
+    <br>
+    <app-home-forum [langcd]="lang"></app-home-forum>
+
+    <div class="space-50" id="sponsor"></div>
+    <br>
+    <app-home-sponsors [langcd]="lang"></app-home-sponsors>
+
+    <div class="space-50" id="edition"></div>
+    <br>
+    <app-home-ancien-edition [langcd]="lang"></app-home-ancien-edition>
+    <div class="space-50" id="temoignage"></div>
+    <br>
+
+    <app-Temoignage [langcd]="lang"></app-Temoignage>
+  </div>
+ <!----------------------------------------------------------------------------------------->
+
+
+  
+  

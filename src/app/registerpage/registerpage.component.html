@@ -1,0 +1,305 @@
+<app-header [langcd]="langcd"></app-header>
+
+<div class="wrapper">
+  
+  <section class="section">
+    <div class="container">
+      <div class="row">
+             <!--  <div class="squares square1"> </div>
+                <div class="squares square2"></div>
+                <div class="squares square3"></div>
+                <div class="squares square4"></div>
+                <div class="squares square5"></div>
+                <div class="squares square7"></div>--> 
+
+        <!--===========================Francais=================================-->
+
+        <div *ngIf=langcd class="col-md-12">
+            <h1 class="profile-title text-left">Inscription</h1>
+            <p class="text-on-back">Forum</p>
+          <div class="card card-plain">
+              <div class="row">
+                  <div class="form-group" class="col-md-12">
+                  <alert *ngIf="isInscription" class="alert-with-icon" [type]="'warning alert-with-icon'">
+                   <span class="tim-icons icon-bulb-63" data-notify="icon"> </span>
+                   <span>
+                 {{errorMessage}}
+                   </span>
+                 </alert>
+               </div></div>
+            <div class="card-body">
+              <form #f="ngForm"  (ngSubmit)="onSubmit()" ngNativeValidate>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label> Nom <span style="color: red;">*</span></label>
+                      <input class="form-control" type="text"           
+                                   placeholder="Nom" 
+                                   required
+                                   name="nom"
+                                   minlength="3"
+
+                          [(ngModel)]="credentials.nom"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Prénom <span style="color: red;">*</span></label>
+                      <input
+                        class="form-control"
+                        placeholder="Prénom"
+                        type="text" 
+                        required
+                        name="prenom"
+                        minlength="3"          
+                                        [(ngModel)]="credentials.prenom"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label> Adresse Email <span style="color: red;">*</span></label>
+                        <input
+                          class="form-control"
+                          placeholder="example@forum.com"
+                          type="email" 
+                          required
+                          name="email"
+                       [(ngModel)]="credentials.email"
+                        />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label> Téléphone <span style="color: red;">*</span></label>
+                        <input
+                          class="form-control"
+                          type="text"
+                          placeholder="00000000"
+                          required
+                          name="tel"
+                          minlength="8" 
+                          maxlength="8"         
+                                          [(ngModel)]="credentials.tel"
+  
+                        />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label> Ecole <span style="color: red;">*</span></label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="ENSIT, ENIT..."
+                            required
+                            name="ecole"
+                            minlength="3"
+                            [(ngModel)]="credentials.ecole"
+  
+                          />
+                      </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                          <label> Specialité <span style="color: red;">*</span></label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="Spécialité" 
+                            required
+                            name="specialite"
+                            minlength="3"
+                            [(ngModel)]="credentials.specialite"
+                          />
+                        </div>
+                      </div>
+                </div>
+                <div class="row">
+                  
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label> classe <span style="color: red;">*</span></label>
+                      <input
+                        class="form-control" 
+                        type="text"
+                        placeholder="1er, 2ème, 3ème..."
+                        required
+                        name="classe"
+                        minlength="3"
+                        [(ngModel)]="credentials.classe"
+                      />
+                     
+                    </div>
+                    
+                   
+                  </div>
+
+                  <div class="col-md-2">
+                    <br>
+
+                      <button
+                      class="btn btn-primary btn-round float-right"
+                      placement="right"
+                      type="submit"
+                    >
+                      S'inscrire 
+                    </button></div>
+                
+                </div>
+              
+              </form>
+            </div>
+          </div>
+        </div>
+
+<!--===========================Anglais=================================-->
+
+        <div *ngIf=!langcd class="col-md-12">
+            <h1 class="profile-title text-left">Registration</h1>
+            <p class="text-on-back">Forum</p>
+          <div class="card card-plain">
+              <div class="row">
+                  <div class="form-group" class="col-md-12">
+                  <alert *ngIf="isInscription" class="alert-with-icon" [type]="'warning alert-with-icon'">
+                   <span class="tim-icons icon-bulb-63" data-notify="icon"> </span>
+                   <span>
+                 {{errorMessage}}
+                   </span>
+                 </alert>
+               </div></div>
+            <div class="card-body">
+              <form #f="ngForm"  (ngSubmit)="onSubmit()" ngNativeValidate>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label> Last name <span style="color: red;">*</span></label>
+                      <input class="form-control" type="text"           
+                                   placeholder="Last name" 
+                                   required
+                                   name="nom"
+                                   minlength="3"
+
+                          [(ngModel)]="credentials.nom"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>First name <span style="color: red;">*</span></label>
+                      <input
+                        class="form-control"
+                        placeholder="First name"
+                        type="text" 
+                        required
+                        name="prenom"
+                        minlength="3"          
+                                        [(ngModel)]="credentials.prenom"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label> E-mail adress <span style="color: red;">*</span></label>
+                        <input
+                          class="form-control"
+                          placeholder="example@forum.com"
+                          type="email" 
+                          required
+                          name="email"
+                       [(ngModel)]="credentials.email"
+                        />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label> Phone <span style="color: red;">*</span></label>
+                        <input
+                          class="form-control"
+                          type="text"
+                          placeholder="00000000"
+                          required
+                          name="tel"
+                          minlength="8" 
+                          maxlength="8"         
+                                          [(ngModel)]="credentials.tel"
+  
+                        />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="form-group">
+                          <label> School <span style="color: red;">*</span></label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="ENSIT, ENIT..."
+                            required
+                            name="ecole"
+                            minlength="3"
+                            [(ngModel)]="credentials.ecole"
+  
+                          />
+                      </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                          <label> Specialty <span style="color: red;">*</span></label>
+                          <input
+                            class="form-control"
+                            type="text"
+                            placeholder="Specialty" 
+                            required
+                            name="specialite"
+                            minlength="3"
+                            [(ngModel)]="credentials.specialite"
+                          />
+                        </div>
+                      </div>
+                </div>
+                <div class="row">
+                  
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label> Classroom <span style="color: red;">*</span></label>
+                      <input
+                        class="form-control" 
+                        type="text"
+                        placeholder="1er, 2ème, 3ème..."
+                        required
+                        name="classe"
+                        minlength="3"
+                        [(ngModel)]="credentials.classe"
+                      />
+                     
+                    </div>
+                    
+                   
+                  </div>
+
+                  <div class="col-md-2">
+                    <br>
+
+                      <button
+                      class="btn btn-primary btn-round float-right"
+                      placement="right"
+                      type="submit"
+                    >
+                    Register
+                    </button></div>
+                
+                </div>
+              
+              </form>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </section></div>
