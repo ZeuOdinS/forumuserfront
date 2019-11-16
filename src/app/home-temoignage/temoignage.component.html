@@ -4,7 +4,7 @@
 <div *ngIf=langcd style=" padding: 50px; margin-bottom: 50px;" id="images" class="brand">
   <h1 class="mb-5 text-center text-white" style="font-size:2.3em; ">Témoignages</h1>
   <div class="row">
-    <div class="col-sm-6 col-6">
+    <div  *ngIf="isDesktopDevice" class="col-sm-6 col-6">
       <div>
         <img alt="Circle image" class="img-fluid rounded-circle shadow" src="../../../../assets/img/0.jpg"
           style="width: 150px;" />
@@ -14,33 +14,72 @@
         <hr class="line-success" />
 
         <p>
-           
-        Réellement,vous avez la force en vous,elle est là et elle n'attend qu'ètre exploitée donc allez-y 
-        formez vous ,faites l'effort d'ètre à jour, d'ètre dans le numerique qui avance à grand pas travaillez travaillez,tout 
-        en étant surtout épanoui parce que l'idée que quand c'est trés ennuyeux c'est que c'est professionnel,là réellement il va falloir
-        à autre chose.Quand on est épanoui,quand on est heureux , quand on aime ce qu'on est en train de faire,on va pouvoir 
-        u consacrer de temps et on va pouvoir ètre réellement performant et je vous remercie.
+
+          Réellement,vous avez la force en vous,elle est là et elle n'attend qu'ètre exploitée donc allez-y
+          formez vous ,faites l'effort d'ètre à jour, d'ètre dans le numerique qui avance à grand pas travaillez
+          travaillez,tout
+          en étant surtout épanoui parce que l'idée que quand c'est trés ennuyeux c'est que c'est professionnel,là
+          réellement il va falloir
+          à autre chose.Quand on est épanoui,quand on est heureux , quand on aime ce qu'on est en train de faire,on va
+          pouvoir
+          u consacrer de temps et on va pouvoir ètre réellement performant et je vous remercie.
         </p>
       </div>
     </div>
-    <div class="col-sm-6 col-6">
+    <div  *ngIf="isDesktopDevice" class="col-sm-6 col-6">
       <div>
-        <img alt="Circle image" class="img-fluid rounded-circle shadow" src="../../../../assets/img/Volker_Bank_Portrait.jpg"
-          style="width: 150px;" />
+        <img alt="Circle image" class="img-fluid rounded-circle shadow"
+          src="../../../../assets/img/Volker_Bank_Portrait.jpg" style="width: 150px;" />
         <h4 class="info-title">PR. Volker Bank</h4>
-        <p class="text-info " >Université Technique de Chemnitz Allemagne</p>
+        <p class="text-info ">Université Technique de Chemnitz Allemagne</p>
 
         <hr class="line-danger" />
 
         <p>
-            Je suis absoulement charmé de l'organisation,par les étudiants ça marche très bien et je me
-            sens très à l'aise merci beaucoup.
+          Je suis absoulement charmé de l'organisation,par les étudiants ça marche très bien et je me
+          sens très à l'aise merci beaucoup.
         </p>
       </div>
     </div>
 
-   
-    
+    <div  *ngIf="!isDesktopDevice" class="col-sm-12 col-12">
+        <div>
+          <img alt="Circle image" class="img-fluid rounded-circle shadow" src="../../../../assets/img/0.jpg"
+            style="width: 150px;" />
+          <h4 class="info-title">DR. Lilia Trabelsi Masmoudi  <p class="text-info ">Maitre assistante à l'ESSAI</p>
+  
+            <hr class="line-success" /></h4>
+        
+  
+          <p>
+  
+            Réellement,vous avez la force en vous,elle est là et elle n'attend qu'ètre exploitée donc allez-y
+            formez vous ,faites l'effort d'ètre à jour, d'ètre dans le numerique qui avance à grand pas travaillez
+            travaillez,tout
+            en étant surtout épanoui parce que l'idée que quand c'est trés ennuyeux c'est que c'est professionnel,là
+            réellement il va falloir
+            à autre chose.Quand on est épanoui,quand on est heureux , quand on aime ce qu'on est en train de faire,on va
+            pouvoir
+            u consacrer de temps et on va pouvoir ètre réellement performant et je vous remercie.
+          </p>
+        </div>
+      </div>
+      <div  *ngIf="!isDesktopDevice" class="col-sm-12 col-12">
+        <div>
+          <img alt="Circle image" class="img-fluid rounded-circle shadow"
+            src="../../../../assets/img/Volker_Bank_Portrait.jpg" style="width: 150px;" />
+          <h4 class="info-title">PR. Volker Bank     <p class="text-info ">Université Technique de Chemnitz Allemagne</p>
+  
+            <hr class="line-danger" /></h4>
+      
+  
+          <p>
+            Je suis absoulement charmé de l'organisation,par les étudiants ça marche très bien et je me
+            sens très à l'aise merci beaucoup.
+          </p>
+        </div>
+      </div>
+
   </div>
 
 
@@ -52,52 +91,95 @@
 <!--===========================Anglais=================================-->
 
 <div *ngIf=!langcd style=" padding: 50px; margin-bottom: 50px;" id="images" class="brand">
-    <h1 class="mb-5 text-center text-white" style="font-size:2.3em; ">Testimonials</h1>
-    <div class="row">
-      <div class="col-sm-6 col-6">
-        <div>
-          <img alt="Circle image" class="img-fluid rounded-circle shadow" src="../../../../assets/img/0.jpg"
-            style="width: 150px;" />
-          <h4 class="info-title">DR. Lilia Trabelsi Masmoudi</h4>
-          <p class="text-info ">Assistant Professor at the ESSAI</p>
-  
-          <hr class="line-success" />
-  
-          <p>
-             
-              Really, you have the strength in you, it is there and it is only waiting to be exploited so go there form,
-               make the effort to be up to date, to be in the numerical which advances with big step work work,
-                while being especially fulfilled because the idea that when it's very boring is that it's professional,
-                 there really will be something else. When we are fulfilled,
-                  when we are happy, when we love what we are doing,
-                   we will be able to devote time and we will be able to really perform and thank you.
+  <h1 class="mb-5 text-center text-white" style="font-size:2.3em; ">Testimonials</h1>
+  <div class="row">
+    <div *ngIf="isDesktopDevice" class="col-sm-6 col-6">
+      <div>
+        <img alt="Circle image" class="img-fluid rounded-circle shadow" src="../../../../assets/img/0.jpg"
+          style="width: 150px;" />
+        <h4 class="info-title">DR. Lilia Trabelsi Masmoudi</h4>
+        <p class="text-info ">Assistant Professor at the ESSAI</p>
 
-          </p>
-        </div>
+        <hr class="line-success" />
+
+        <p>
+
+          Really, you have the strength in you, it is there and it is only waiting to be exploited so go there form,
+          make the effort to be up to date, to be in the numerical which advances with big step work work,
+          while being especially fulfilled because the idea that when it's very boring is that it's professional,
+          there really will be something else. When we are fulfilled,
+          when we are happy, when we love what we are doing,
+          we will be able to devote time and we will be able to really perform and thank you.
+
+        </p>
       </div>
-      <div class="col-sm-6 col-6">
-        <div>
-          <img alt="Circle image" class="img-fluid rounded-circle shadow" src="../../../../assets/img/Volker_Bank_Portrait.jpg"
-            style="width: 150px;" />
-          <h4 class="info-title">PR. Volker Bank</h4>
-          <p class="text-info " >
-              Technical University of Chemnitz Germany</p>
-  
-          <hr class="line-danger" />
-  
-          <p>
-              I am charmed abscence of the organization, by the students it works very well and
-               I feel very comfortable thank you very much
-.
-          </p>
-        </div>
-      </div>
-  
-     
-      
     </div>
-  
-  
-  
-  
+
+    <div *ngIf="!isDesktopDevice" class="col-sm-12 col-12">
+      <div>
+        <img alt="Circle image" class="img-fluid rounded-circle shadow" src="../../../../assets/img/0.jpg"
+          style="width: 150px;" />
+        <h4 class="info-title">DR. Lilia Trabelsi Masmoudi
+          <p class="text-info ">Assistant Professor at the ESSAI</p>
+
+          <hr class="line-success" />
+
+        </h4>
+
+
+        <p>
+
+          Really, you have the strength in you, it is there and it is only waiting to be exploited so go there form,
+          make the effort to be up to date, to be in the numerical which advances with big step work work,
+          while being especially fulfilled because the idea that when it's very boring is that it's professional,
+          there really will be something else. When we are fulfilled,
+          when we are happy, when we love what we are doing,
+          we will be able to devote time and we will be able to really perform and thank you.
+
+        </p>
+      </div>
+    </div>
+    <div *ngIf="isDesktopDevice" class="col-sm-6 col-6">
+      <div>
+        <img alt="Circle image" class="img-fluid rounded-circle shadow"
+          src="../../../../assets/img/Volker_Bank_Portrait.jpg" style="width: 150px;" />
+        <h4 class="info-title">PR. Volker Bank</h4>
+        <p class="text-info ">
+          Technical University of Chemnitz Germany</p>
+
+        <hr class="line-danger" />
+
+        <p>
+          I am charmed abscence of the organization, by the students it works very well and
+          I feel very comfortable thank you very much
+          .
+        </p>
+      </div>
+    </div>
+
+    <div *ngIf="!isDesktopDevice" class="col-sm-12 col-12">
+      <div>
+        <img alt="Circle image" class="img-fluid rounded-circle shadow"
+          src="../../../../assets/img/Volker_Bank_Portrait.jpg" style="width: 150px;" />
+        <h4 class="info-title">PR. Volker Bank <p class="text-info ">
+            Technical University of Chemnitz Germany</p>
+          <hr class="line-danger" />
+        </h4>
+
+
+
+
+        <p>
+          I am charmed abscence of the organization, by the students it works very well and
+          I feel very comfortable thank you very much
+          .
+        </p>
+      </div>
+    </div>
+
   </div>
+
+
+
+
+</div>

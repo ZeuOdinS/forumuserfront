@@ -32,6 +32,7 @@ import { RegisterEmployeComponent } from '../register-employe/register-employe.c
 import { RegisterEntrepriseComponent } from '../register-entreprise/register-entreprise.component';
 import { TemoignageComponent } from '../home-temoignage/temoignage.component';
 import { DeviceDetectorModule } from 'ngx-device-detector';
+import { ProgramComponent } from '../program/program.component';
 
 
 @NgModule({
@@ -42,7 +43,7 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
     RouterModule, NgxPageScrollModule,
     BsDropdownModule.forRoot(),
     ProgressbarModule.forRoot(),
-    TooltipModule.forRoot(),      DeviceDetectorModule.forRoot(),
+    TooltipModule.forRoot(), DeviceDetectorModule.forRoot(),
 
     PopoverModule.forRoot(),
     CollapseModule.forRoot(),
@@ -61,13 +62,14 @@ import { DeviceDetectorModule } from 'ngx-device-detector';
     HomeSponsorsComponent,
     HomeAncienEditionComponent,
     RegisterEmployeComponent,
-    RegisterEntrepriseComponent
+    RegisterEntrepriseComponent, ProgramComponent
+
 
 
   ],
   exports: [
     IndexComponent,
-   
+
     RegisterpageComponent,
     TemoignageComponent
   ],
