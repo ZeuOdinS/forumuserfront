@@ -29,7 +29,7 @@
         </div>
       </div>
       <ul class="navbar-nav">
-        <li class="nav-item p-0">
+        <li *ngIf="!isMobile" class="nav-item p-0">
           <a class="nav-link" href="https://www.linkedin.com/company/insight-of-ensit/about/" placement="bottom"
             target="_blank" tooltip="Suivez-nous sur LinkedIn"
             (click)="isCollapsed = !isCollapsed"
@@ -38,7 +38,7 @@
             <p class="d-lg-none d-xl-none">LinkedIn</p>
           </a>
         </li>
-        <li class="nav-item p-0">
+        <li *ngIf="!isMobile" class="nav-item p-0">
           <a class="nav-link" href="https://www.facebook.com/pg/InsightofENSIT/about/?ref=page_internal"
             placement="bottom" target="_blank" tooltip="Aimez-nous sur Facebook"
             (click)="isCollapsed = !isCollapsed"
@@ -47,7 +47,7 @@
             <p class="d-lg-none d-xl-none">Facebook</p>
           </a>
         </li>
-        <li class="nav-item p-0">
+        <li *ngIf="!isMobile" class="nav-item p-0">
           <a class="nav-link" href="https://www.instagram.com/insightofensit19/p/Bqx_2wenDA_/?hl=en" placement="bottom"
             target="_blank" tooltip="Suivez-nous sur Instagram"              (click)="isCollapsed = !isCollapsed"
             >
@@ -98,14 +98,14 @@
            Inscription
           </a>
           <div class="dropdown-menu " *dropdownMenu>
-            <a class="dropdown-item" (click)="registerEtudiant(lang)" >
+            <a class="dropdown-item"routerLink (click)="registerEtudiant(lang)" >
               Etudiant
             </a>
 
-            <a class="dropdown-item"  (click)="registerEmploye(lang)">
+            <a class="dropdown-item"  routerLink (click)="registerEmploye(lang)">
               Employés
             </a>
-            <a class="dropdown-item" (click)="registerEntreprise(lang)">
+            <a class="dropdown-item" routerLink (click)="registerEntreprise(lang)">
               Entreprise
             </a>
           </div>
@@ -116,11 +116,11 @@
              Langue
             </a>
             <div class="dropdown-menu " *dropdownMenu >
-              <a class="dropdown-item " (click)="isCollapsed = !isCollapsed"  (click)="changeLangue('FR')" >
+              <a class="dropdown-item "routerLink (click)="isCollapsed = !isCollapsed"  (click)="changeLangue('FR')" >
                 Français
               </a>
   
-              <a class="dropdown-item"(click)="isCollapsed = !isCollapsed"  (click)="changeLangue('EN')">
+              <a class="dropdown-item" routerLink (click)="isCollapsed = !isCollapsed"  (click)="changeLangue('EN')">
                 Anglais
               </a>
            
@@ -166,7 +166,7 @@
           </div>
         </div>
         <ul class="navbar-nav">
-          <li class="nav-item p-0">
+          <li  *ngIf="!isMobile"class="nav-item p-0">
             <a class="nav-link" href="https://www.linkedin.com/company/insight-of-ensit/about/" placement="bottom"
               target="_blank" tooltip="follow us on LinkedIn"
               (click)="isCollapsed = !isCollapsed"
@@ -175,7 +175,7 @@
               <p class="d-lg-none d-xl-none">LinkedIn</p>
             </a>
           </li>
-          <li class="nav-item p-0">
+          <li  *ngIf="!isMobile"class="nav-item p-0">
             <a class="nav-link" href="https://www.facebook.com/pg/InsightofENSIT/about/?ref=page_internal"
               placement="bottom" target="_blank" tooltip="like us on Facebook"
               (click)="isCollapsed = !isCollapsed"
@@ -184,7 +184,7 @@
               <p class="d-lg-none d-xl-none">Facebook</p>
             </a>
           </li>
-          <li class="nav-item p-0">
+          <li *ngIf="!isMobile" class="nav-item p-0">
             <a class="nav-link" href="https://www.instagram.com/insightofensit19/p/Bqx_2wenDA_/?hl=en" placement="bottom"
               target="_blank" tooltip="follow us on Instagram"              (click)="isCollapsed = !isCollapsed"
               >
@@ -235,14 +235,14 @@
               Registration
             </a>
             <div class="dropdown-menu " *dropdownMenu>
-              <a class="dropdown-item" (click)="registerEtudiant(lang)" >
+              <a class="dropdown-item" routerLink (click)="registerEtudiant(lang)" >
                 Student
               </a>
   
-              <a class="dropdown-item"  (click)="registerEmploye(lang)">
+              <a class="dropdown-item" routerLink (click)="registerEmploye(lang)">
                 Employee
               </a>
-              <a class="dropdown-item"  [routerLink]="['/registerentreprise']">
+              <a class="dropdown-item" routerLink (click)="registerEntreprise(lang)" >
                 Enterprise
               </a>
             </div>
@@ -254,11 +254,11 @@
                Language
               </a>
               <div class="dropdown-menu " *dropdownMenu>
-                  <a class="dropdown-item " (click)="isCollapsed = !isCollapsed"  (click)="changeLangue('FR')" >
+                  <a class="dropdown-item " routerLink (click)="isCollapsed = !isCollapsed"  (click)="changeLangue('FR')" >
                       French
                 </a>
     
-                <a class="dropdown-item "  (click)="isCollapsed = !isCollapsed" (click)="changeLangue('EN')" >
+                <a class="dropdown-item " routerLink (click)="isCollapsed = !isCollapsed" (click)="changeLangue('EN')" >
                     English
                 </a>
              

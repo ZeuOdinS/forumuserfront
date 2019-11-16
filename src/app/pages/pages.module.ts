@@ -31,6 +31,7 @@ import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { RegisterEmployeComponent } from '../register-employe/register-employe.component';
 import { RegisterEntrepriseComponent } from '../register-entreprise/register-entreprise.component';
 import { TemoignageComponent } from '../home-temoignage/temoignage.component';
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { TemoignageComponent } from '../home-temoignage/temoignage.component';
     RouterModule, NgxPageScrollModule,
     BsDropdownModule.forRoot(),
     ProgressbarModule.forRoot(),
-    TooltipModule.forRoot(),
+    TooltipModule.forRoot(),      DeviceDetectorModule.forRoot(),
+
     PopoverModule.forRoot(),
     CollapseModule.forRoot(),
     JwBootstrapSwitchNg2Module,

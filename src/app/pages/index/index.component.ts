@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy, Output } from "@angular/core";
 import noUiSlider from "nouislider";
 import { Router, ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: "app-index",
@@ -16,7 +17,19 @@ export class IndexComponent {
   date = new Date();
   pagination = 3;
   pagination1 = 1;
-  constructor(private router:Router, private route: ActivatedRoute) { }
+  deviceInfo: any;
+  isMobile: any;
+  isTablet: any;
+  isDesktopDevice: any;
+  constructor(private router:Router, private route: ActivatedRoute,private deviceService: DeviceDetectorService) {
+
+
+      this.deviceInfo = this.deviceService.getDeviceInfo();
+       this.isMobile = this.deviceService.isMobile();
+
+
+
+   }
   scrollToDownload(element: any) {
     element.scrollIntoView({ behavior: "smooth" });
   }
