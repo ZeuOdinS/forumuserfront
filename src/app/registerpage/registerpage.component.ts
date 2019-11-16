@@ -46,6 +46,11 @@ export class RegisterpageComponent implements OnInit, OnDestroy {
       this.credentials.prenom='';
       this.credentials.specialite='';
       this.credentials.tel='';
+      setTimeout(() => 
+{if(this.response)
+    this.router.navigate(['/home']);
+},
+1000);
 
 
      // this.router.navigateByUrl('/home');

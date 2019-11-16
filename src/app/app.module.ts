@@ -11,6 +11,7 @@ import { CountDownModule } from 'ng6-countdown';
 import { PagesModule } from "./pages/pages.module";
 import { FooterComponent } from './footer/footer.component';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { ProgramComponent } from './program/program.component';
 @NgModule({
   declarations: [
     AppComponent,

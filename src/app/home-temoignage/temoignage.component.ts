@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, Input } from "@angular/core";
-import Chart from "chart.js";
 import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({

@@ -68,12 +68,17 @@
             <p>Forum 2019</p>
           </a>
         </li>
-
         <li class="nav-item p-0">
-          <a class="nav-link" pageScroll href="#sponsor" placement="bottom" tooltip=" Sponsors & Partenaires"
+            <a class="nav-link" pageScroll href="#program" placement="bottom" tooltip="Programme"
+              (click)="isCollapsed = !isCollapsed">
+              <p>Programme</p>
+            </a>
+          </li>
+        <li class="nav-item p-0">
+          <a class="nav-link" pageScroll href="#sponsor" placement="bottom" tooltip=" Sponsors"
             (click)="isCollapsed = !isCollapsed">
 
-            <p> Sponsors & Partenaires</p>
+            <p> Sponsors</p>
           </a>
         </li>
 
@@ -205,12 +210,17 @@
               <p>Forum 2019</p>
             </a>
           </li>
-  
           <li class="nav-item p-0">
-            <a class="nav-link" pageScroll href="#sponsor" placement="bottom" tooltip=" Sponsors & Partner"
+              <a class="nav-link" pageScroll href="#program" placement="bottom" tooltip="Program"
+                (click)="isCollapsed = !isCollapsed">
+                <p>Program</p>
+              </a>
+            </li>
+          <li class="nav-item p-0">
+            <a class="nav-link" pageScroll href="#sponsor" placement="bottom" tooltip=" Sponsors"
               (click)="isCollapsed = !isCollapsed">
   
-              <p> Sponsors & Partner</p>
+              <p> Sponsors</p>
             </a>
           </li>
   
@@ -287,9 +297,11 @@
     <div class="space-50" id="descF"></div>
     <br>
     <app-home-forum [langcd]="lang"></app-home-forum>
-
+    <div class="space-50" id="program"></div>
+    <br>
+   <app-program [langcd]="lang" ></app-program>
     <div class="space-50" id="sponsor"></div>
-    <br><br>
+    <br>
     <app-home-sponsors [langcd]="lang"></app-home-sponsors>
 
     <div class="space-50" id="edition"></div>
