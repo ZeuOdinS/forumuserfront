@@ -44,12 +44,13 @@ export class RegisterEntrepriseComponent  implements OnInit, OnDestroy {
       this.credentials.raisonSociale='';
       this.credentials.email='';
       this.credentials.tel='';
+      if(this.response){
       setTimeout(() => 
-{if(this.response)
+{
     this.router.navigate(['/home']);
 },
 1000);
-    },
+    }},
     error => {
       console.log(error);
       this.errorMessage = error.error.message;

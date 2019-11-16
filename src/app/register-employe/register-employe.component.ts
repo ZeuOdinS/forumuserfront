@@ -46,11 +46,12 @@ export class RegisterEmployeComponent implements OnInit, OnDestroy {
       this.credentials.email='';
       this.credentials.prenom='';
       this.credentials.tel='';
+      if(this.response){
       setTimeout(() => 
-      {if(this.response)
+      {
           this.router.navigate(['/home']);
       },
-      1000);   
+      1000);  } 
     
     },
       error => {
