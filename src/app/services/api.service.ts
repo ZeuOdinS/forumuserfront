@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  private baseURI : String = "https://forumensitbackend.herokuapp.com/ForumEnsit";
+  private baseURI : String = "https://backend2forum.herokuapp.com/ForumEnsit";
   private header=new HttpHeaders().set('Content-Type','application/json');
   constructor(private http:HttpClient) { }
 
